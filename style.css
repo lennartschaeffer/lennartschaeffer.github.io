@@ -1,0 +1,99 @@
+*
+{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  
+}
+body{
+  background-color: #111;
+  background-size: cover; /* Ensure the background image covers the entire container */
+  background-repeat: no-repeat;
+  background-position: center; /* Center the background image */
+}
+h1
+{
+  margin-top:30px;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  font-size: 6em;
+  color: #222;
+
+}
+h1::before
+{
+    content: attr(data-text);
+    position: absolute;
+    color: #fff;
+    width:350px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid #fff;
+    animation:animate 5s linear forwards ;
+    filter: drop-shadow(0 0 20px #fff);
+}
+@keyframes animate
+{
+  0%,10%,100%
+  {
+    width: 0;
+  }
+  100%
+  {
+    width: 57%;
+  }
+  
+}
+.image-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Set the body to take up the full height of the viewport */
+  margin: 0; /* Remove default margin */
+  margin-top: -25px; /* Adjust the negative margin to move the images up */
+}
+
+.resizeable-image {
+  width: 330px;
+  height: 400px;
+  object-fit: cover;
+  margin-right: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2), /* Reduce opacity to 0.3 */
+        0 0 20px rgba(255, 255, 255, 0.2),
+        0 0 40px rgba(255, 255, 255, 0.2),
+        0 0 80px rgba(255, 255, 255, 0.2),
+        0 0 160px rgba(255, 255, 255, 0.2);
+}
+
+.image-item {
+  text-align: center; /* Center text under each image */
+}
+h2 {
+  margin-top: 20px;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  font-size: 2em;
+  color: #fff;
+  filter: drop-shadow(0 0 20px #fff);
+}
+
+  h3 {
+    color: #fff;
+    position: absolute;
+    bottom: -150px;
+    width: 100%;
+    text-align: center;
+    padding: 20px; /* Add padding if needed */
+    box-sizing: border-box; /* Include padding in the element's total width */
+    filter: drop-shadow(0 0 20px #fff);
+  }
+  
+  
+
+
+
